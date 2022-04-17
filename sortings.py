@@ -1,6 +1,6 @@
 """Implemetations of sorting functions."""
 import time
-from sort import shell_sort, insertion_sort
+from sort import shell_sort, insertion_sort, bubble_sort
 from search import linear_search, binary_search
 
 
@@ -43,6 +43,10 @@ if __name__ == '__main__':
 
     start = time.time()
     shell_sort(BIG_DATA_SORT_LIST)
+    print(time.time() - start)
+
+    start = time.time()
+    print(f'Bubble sort: {bubble_sort(SORT_LIST, reversed=True)}')
     print(time.time() - start)
 
     print(f'Insertion sort: {insertion_sort(SORT_LIST)}')
